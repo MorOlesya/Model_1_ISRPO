@@ -75,8 +75,7 @@ namespace Model_1
                             try
                             {
                                 int numberLesson = int.Parse(Console.ReadLine());
-                                worksheet.Cell(numberLesson, column).Clear();
-                                worksheet.Cell(numberLesson, column + 1).Clear();
+                                worksheet.Row(numberLesson).Delete();
                             } catch (FormatException) {
                                 Console.WriteLine($"!!!Ошибка записи формата:");
                                 Console.WriteLine($"Необходимо ввести номер предмета по таблице выше!!!");
